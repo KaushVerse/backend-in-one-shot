@@ -335,66 +335,66 @@ Master this → backend, frontend, DevOps all become easy.
 
 ## 📥 EXPRESS / BACKEND REQUEST OBJECT — COMPLETE TABLE (req.*)
 
-| Property            | Icon | Example          | Meaning / Use    |
-| ------------------- | ---- | ---------------- | ---------------- |
-| **req.method**      | 🔤   | GET              | HTTP method used |
-| **req.url**         | 🌍   | /users/10        | Full request URL |
-| **req.path**        | 📁   | /users/10        | URL path only    |
-| **req.query**       | 🔎   | { page: 1 }      | Query parameters |
-| **req.params**      | 🧩   | { id: 10 }       | Route params     |
-| **req.body**        | 📦   | { name: 'Aman' } | Request payload  |
-| **req.headers**     | 📜   | authorization    | All headers      |
-| **req.cookies**     | 🍪   | sessionId        | Cookies sent     |
-| **req.ip**          | 🌐   | 192.168.1.1      | Client IP        |
-| **req.protocol**    | 🔐   | https            | http / https     |
-| **req.secure**      | 🛡️  | true             | HTTPS or not     |
-| **req.hostname**    | 🏠   | api.example.com  | Host name        |
-| **req.originalUrl** | 🧭   | /users/10?page=1 | Original URL     |
-| **req.xhr**         | ⚡    | true             | AJAX request     |
+| Property               |      Example        | Meaning / Use    |
+| -------------------    | ----  --------------| ---------------- |
+| **🔤 req.method**      |       GET           | HTTP method used |
+| **🌍 req.url**         |    /users/10        | Full request URL |
+| **📁 req.path**        |    /users/10        | URL path only    |
+| **🔎 req.query**       |    { page: 1 }      | Query parameters |
+| **🧩 req.params**      |    { id: 10 }       | Route params     |
+| **📦 req.body**        |    { name: 'Aman' } | Request payload  |
+| **📜 req.headers**     |    authorization    | All headers      |
+| **🍪 req.cookies**     |    sessionId        | Cookies sent     |
+| **🌐  req.ip**          |    192.168.1.1      | Client IP        |
+| **🔐 req.protocol**    |    https            | http / https     |
+| **🛡️ req.secure**      |    true             | HTTPS or not     |
+| **🏠 req.hostname**    |    api.example.com  | Host name        |
+| **🧭 req.originalUrl** |    /users/10?page=1 | Original URL     |
+| **⚡ req.xhr**         |    true             | AJAX request     |
 
 ---
 
 ## 🧠 REQUEST DATA — WHERE IT COMES FROM (Quick Map)
 
-| Data    | Comes From | Icon | Example       |
-| ------- | ---------- | ---- | ------------- |
-| Method  | HTTP       | 🔤   | GET           |
-| Params  | URL path   | 🧩   | /users/:id    |
-| Query   | URL query  | 🔎   | ?page=1       |
-| Body    | Payload    | 📦   | JSON          |
-| Headers | Metadata   | 📜   | Authorization |
-| Cookies | Browser    | 🍪   | token         |
+| Data    | Comes From     | Example       |
+| ------- | ----------  ---| ------------- |
+| 🔤 Method  | HTTP         | GET           |
+| 🧩 Params  | URL path     | /users/:id    |
+| 🔎 Query   | URL query    | ?page=1       |
+| 📦 Body    | Payload      | JSON          |
+| 📜 Headers | Metadata     | Authorization |
+| 🍪 Cookies | Browser      | token         |
 
 ---
 
 ## 📤 EXPRESS / BACKEND RESPONSE OBJECT — COMPLETE TABLE (res.*)
 
-| Method / Property    | Icon | Example                   | Meaning / Use             |
-| -------------------- | ---- | ------------------------- | ------------------------- |
-| **res.status()**     | 🔢   | res.status(200)           | Set HTTP status code      |
-| **res.send()**       | 📤   | res.send('OK')            | Send response (any type)  |
-| **res.json()**       | 🧾   | res.json({ ok: true })    | Send JSON response        |
-| **res.end()**        | 🛑   | res.end()                 | End response without data |
-| **res.redirect()**   | 🔁   | res.redirect('/login')    | Redirect client           |
-| **res.set()**        | 📜   | res.set('Auth', 'token')  | Set response headers      |
-| **res.get()**        | 🔍   | res.get('Content-Type')   | Read response header      |
-| **res.type()**       | 🎭   | res.type('json')          | Set content type          |
-| **res.sendStatus()** | 🚦   | res.sendStatus(404)       | Status + message          |
-| **res.header()**     | 🧱   | res.header('Cache', 'no') | Alias for set             |
-| **res.append()**     | ➕    | res.append('Set-Cookie')  | Append header             |
-| **res.location()**   | 📍   | res.location('/home')     | Set Location header       |
+| Method / Property       | Example                   | Meaning / Use             |
+| ------------------------|--------------------------- | ------------------------- |
+| **🔢 res.status()**     | res.status(200)           | Set HTTP status code      |
+| **📤 res.send()**       | res.send('OK')            | Send response (any type)  |
+| **🧾 res.json()**       | res.json({ ok: true })    | Send JSON response        |
+| **🛑 res.end()**        | res.end()                 | End response without data |
+| **🔁 res.redirect()**   | res.redirect('/login')    | Redirect client           |
+| **📜 res.set()**        | res.set('Auth', 'token')  | Set response headers      |
+| **🔍 res.get()**        | res.get('Content-Type')   | Read response header      |
+| **🎭 res.type()**       | res.type('json')          | Set content type          |
+| **🚦 res.sendStatus()** | res.sendStatus(404)       | Status + message          |
+| **🧱 res.header()**     | res.header('Cache', 'no') | Alias for set             |
+| **➕ res.append()**     | res.append('Set-Cookie')  | Append header             |
+| **📍 res.location()**   | res.location('/home')     | Set Location header       |
 
 ---
 
 ## 📦 RESPONSE — WHAT GOES TO CLIENT (Quick Map)
 
-| Data        | Set By          | Icon | Example      |
-| ----------- | --------------- | ---- | ------------ |
-| Status Code | res.status      | 🔢   | 200          |
-| Body        | res.send / json | 📦   | JSON / text  |
-| Headers     | res.set         | 📜   | Content-Type |
-| Cookies     | res.cookie      | 🍪   | token        |
-| Redirect    | res.redirect    | 🔁   | /login       |
+| Data           | Set By          | Example      |
+| ---------------|-----------------|--------------|
+| 🔢 Status Code | res.status      | 200          |
+| 📦 Body        | res.send / json | JSON / text  |
+| 📜 Headers     | res.set         | Content-Type |
+| 🍪 Cookies     | res.cookie      | token        |
+| 🔁 Redirect    | res.redirect    | /login       |
 
 ---
 
